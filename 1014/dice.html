@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head><title>캔버스 만들기</title></head>
+    <body>
+        <h3>캔버스로 주사위 만들기</h3>
+        <hr>
+        <canvas id="myCanvas" style="background-color:white"
+        width="250" height="150"></canvas>
+        <script>
+            // context.beginPath(); // 빈 경로 구성
+            // context.moveTo(120, 20); // (120, 20)을 시작점으로 설정
+            // context.lineTo(20, 50); // (120, 20)에서 (20, 50)까지의 직선을 경로에 추가
+            // context.lineTo(150, 120); // (20, 50)에서 (150, 120)까지의 직선을 경로에 추가
+            // context.stroke(); // context의 경로 속 도형들을 캔버스에 모두 그린다
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.beginPath(); 
+            context.strokeStyle = "black"; 
+            context.rect(10, 10, 50, 50); 
+            context.stroke();
+            context.beginPath(); 
+            context.arc(35, 35, 4, 0, 2*Math.PI, false); 
+            context.fill();
+
+            context.beginPath(); 
+            context.strokeStyle = "black"; 
+            context.rect(70, 10, 50, 50); 
+            context.stroke();
+            context.beginPath(); 
+            context.arc(80, 20, 4, 0, 2*Math.PI, false); 
+            context.arc(110, 50, 4, 0, 2*Math.PI, false); 
+            context.fill();
+
+            context.beginPath(); 
+            context.strokeStyle = "black"; 
+            context.rect(130, 10, 50, 50); 
+            context.stroke();
+            context.beginPath(); 
+            context.arc(140, 20, 4, 0, 2*Math.PI, false); 
+            context.arc(155, 35, 4, 0, 2*Math.PI, false); 
+            context.arc(170, 50, 4, 0, 2*Math.PI, false); 
+            context.fill();
+
+            context.beginPath(); 
+            context.strokeStyle = "black"; 
+            context.rect(10, 70, 50, 50); 
+            context.stroke();
+            context.beginPath();
+            context.arc(20, 80, 4, 0, 2*Math.PI, false); 
+            context.arc(50, 80, 4, 0, 2*Math.PI, false); 
+            context.moveTo(20, 110);
+            context.arc(20, 110, 4, 0, 2*Math.PI, false); 
+            context.arc(50, 110, 4, 0, 2*Math.PI, false); 
+            context.fill();
+
+            context.beginPath(); 
+            context.strokeStyle = "black"; 
+            context.rect(70, 70, 50, 50); 
+            context.stroke();
+            context.beginPath(); 
+            context.arc(80, 80, 4, 0, 2*Math.PI, false); 
+            context.arc(110, 80, 4, 0, 2*Math.PI, false); 
+            context.moveTo(95, 95);
+            context.arc(95, 95, 4, 0, 2*Math.PI, false); 
+            context.moveTo(80, 110);
+            context.arc(80, 110, 4, 0, 2*Math.PI, false); 
+            context.arc(110, 110, 4, 0, 2*Math.PI, false); 
+            context.fill();
+
+            context.beginPath(); 
+            context.strokeStyle = "black"; 
+            context.rect(130, 70, 50, 50); 
+            context.stroke();
+            context.beginPath(); 
+            context.arc(140, 80, 4, 0, 2*Math.PI, false); 
+            context.arc(140, 95, 4, 0, 2*Math.PI, false); 
+            context.arc(140, 110, 4, 0, 2*Math.PI, false); 
+            context.moveTo(174, 80);
+            context.arc(170, 80, 4, 0, 2*Math.PI, false); 
+            context.arc(170, 95, 4, 0, 2*Math.PI, false); 
+            context.arc(170, 110, 4, 0, 2*Math.PI, false); 
+            context.fill();
+            </script>
+    </body>
+</html>
